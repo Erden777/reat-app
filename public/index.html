@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="bootstrap/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -28,7 +29,77 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    
+    <a class="nav-link"  href="#" >En</a>
+    <a class="nav-link"  href="#" >Ru</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="margin-left: auto;">
+        <li class="nav-item active">
+          <a class="navbar-brand" href="/home">WORLD NEWS PORTAL <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0" action="/setcookie" method="post">
+          <div class="form-group">
+              
+              <select class="form-control" searchable="Search here.." name="selectStyle">
+                  <option value="" disabled selected>style</option>
+                  <option value="style">default</option>
+                  <option value="light">light</option>
+                  <option value="dark">dark</option>
+                  <option value="monochrome">monochrome</option>
+                  <option value="monochromeinverse">monochrome Inverse</option>
+                  <option value="large">large</option>
+                  <option value="small">small</option>
+                  <option value="facebook">facebook</option>
+                  <option value="instagram">instagram</option>
+              </select>
+              <p><input class="btn btn-sm btn-dark ml-2 mt-3" type="submit" value="Choose"></p>
+          </div>
+        <a class="text-muted" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+        </a>
+        </form>
+    </div>
+  </nav>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #2D6B6A;">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>  <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +110,10 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted center">@First React App.</span>
+      </div>
+    </footer>
   </body>
 </html>
